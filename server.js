@@ -13,7 +13,10 @@ app.use(express.json());
 // Define your routes here
 app.get('/users', async (req, res) => {
     setTimeout(async () => {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        // buat limit query, + digunakan untuk data string
+        const limit = +req.query.limit || 10;
+        // penambahan ${limit berguna untuk melimit sesuai dengan value hx-vals}
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users?_limit=${limit}`);
         const data = await response.json();
         res.send(`
         <h1 class="text-2xl font-bold my-4">Users</h1>
