@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTMX Course</title>
+        <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="text-center">
+            <h1 class="font-bold mt-10">Test HTMX</h1>
+            <button
+                hx-get="https://jsonplaceholder.typicode.com/users"
+                hx-trigger="click"
+                class="bg-blue-500 my-3 mx-2 text-white py-2 px-4 rounded"
+            >
+                Click Me
+            </button>
+        </div>
+    </body>
+</html>
