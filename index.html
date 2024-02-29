@@ -12,11 +12,14 @@
             <h1 class="font-bold mt-10">Test HTMX</h1>
             <button
                 hx-get="https://jsonplaceholder.typicode.com/users"
-                hx-swap="outerHTML"
+                hx-target="#data"
+                hx-confirm="Are you sure to display users data?"
                 class="bg-blue-500 my-3 mx-2 text-white py-2 px-4 rounded"
             >
                 Click Me
             </button>
+
+            <div id="data"></div>
         </div>
     </body>
 </html>
